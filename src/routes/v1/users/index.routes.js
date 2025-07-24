@@ -3,6 +3,7 @@ const router = express.Router();
 
 const AuthRoutes = require("./auth.routes.js");
 const PaymentRoutes = require("./payment.routes.js");
+const PaymentTestRoutes = require("./payment-test.routes.js"); // Add payment test routes
 const WalletRoutes = require("./wallet.routes.js");
 const MembershipRoutes = require("./membership.routes.js");
 const ThalRoutes = require("./thal.routes.js");
@@ -20,6 +21,9 @@ const FastFoodOrderRoutes = require("./fastfood-order.routes.js");
 router.use("/auth", AuthRoutes);
 
 router.use("/payment", PaymentRoutes);
+
+// Payment test routes (development only)
+router.use("/payment-test", PaymentTestRoutes);
 
 router.use("/wallet", WalletRoutes);
 

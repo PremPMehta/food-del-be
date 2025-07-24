@@ -5,7 +5,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "swagger": "node ./swagger.config.js"
+    "swagger": "node ./swagger.config.js",
+    "setup-dev": "node scripts/setup-env.js dev",
+    "setup-prod": "node scripts/setup-env.js prod",
+    "config-status": "node scripts/setup-env.js status",
+    "test-payments": "node scripts/test-payments.js",
+    "test-payments:wallet": "node scripts/test-payments.js wallet",
+    "test-payments:prime": "node scripts/test-payments.js prime",
+    "test-payments:order": "node scripts/test-payments.js order"
   },
   "author": "",
   "license": "ISC",
