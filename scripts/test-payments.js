@@ -6,8 +6,8 @@
 const axios = require('axios');
 
 // Configuration
-const BASE_URL = 'http://localhost:8000/api/v1/users';
-const TEST_USER_TOKEN = 'YOUR_TEST_USER_JWT_TOKEN'; // Replace with actual token
+const BASE_URL = 'http://localhost:8888/api/v1/users';
+const TEST_USER_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODgyMWExMGM0Nzg2OTUxOGY3NjFmYzgiLCJuYW1lIjoiVGVzdCBVc2VyIiwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUuY29tIiwicGhvbmUiOiIxMjM0NTY3ODkwIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NTMzNTY4MTYsImV4cCI6MTc1MzQ0MzIxNn0.ZRW81BrFg8Peodnp7C27MMsswQ4W24Dt9FAAhpf15-U';
 
 // Test data
 const testData = {

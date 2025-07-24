@@ -768,7 +768,7 @@ const verifySignupPaymentToken = async (req, res) => {
 const createWalletTopUpPayment = async (req, res) => {
   try {
     const { amount } = req.body;
-    const userId = req.user.id;
+    const userId = req.user._id;
 
     if (!amount || amount <= 0) {
       return res.status(400).json({
@@ -824,7 +824,7 @@ const createWalletTopUpPayment = async (req, res) => {
  */
 const createPrimeMembershipPayment = async (req, res) => {
   try {
-    const userId = req.user.id;
+    const userId = req.user._id;
     const user = await UserModel.findById(userId);
 
     if (user.isPrimeMember) {
@@ -881,7 +881,7 @@ const createPrimeMembershipPayment = async (req, res) => {
 const createOrderPayment = async (req, res) => {
   try {
     const { amount, orderId, orderType = "thal" } = req.body;
-    const userId = req.user.id;
+    const userId = req.user._id;
 
     if (!amount || amount <= 0) {
       return res.status(400).json({
@@ -1032,7 +1032,7 @@ const verifyRazorpayPayment = async (req, res) => {
 const getPaymentStatus = async (req, res) => {
   try {
     const { payment_id } = req.params;
-    const userId = req.user.id;
+    const userId = req.user._id;
 
     const payment = await PaymentModel.findOne({
       order_id: payment_id,
@@ -1099,7 +1099,7 @@ const getTestCards = async (req, res) => {
 const refundPayment = async (req, res) => {
   try {
     const { payment_id, reason } = req.body;
-    const userId = req.user.id;
+    const userId = req.user._id;
 
     if (!payment_id) {
       return res.status(400).json({
@@ -1162,7 +1162,6 @@ module.exports = {
   getPaymentStatus,
   getTestCards,
   refundPayment,
-  razorpayCreatePayment,
   paypalWebhook,
   verifyPaymentToken,
   verifySignupPaymentToken,
