@@ -29,9 +29,19 @@ const PAYPAL_CLIENT_SECRET =
 const PAYPAL_BASE_URL = "";
 const PAYPAL_WEBHOOK_ID = "";
 
-const RAZORPAY_ID_KEY = "";
-const RAZORPAY_SECRET_KEY = "";
-const WEBHOOK_SECRET = "";
+// Razorpay Configuration
+// For Sandbox Testing (Development)
+const RAZORPAY_ID_KEY = "rzp_test_YOUR_TEST_KEY_ID"; // Replace with your test key ID
+const RAZORPAY_SECRET_KEY = "YOUR_TEST_SECRET_KEY"; // Replace with your test secret key
+const WEBHOOK_SECRET = "YOUR_WEBHOOK_SECRET"; // Replace with your webhook secret
+const RAZORPAY_SANDBOX_MODE = true; // Set to false for production
+
+// For Production (Live)
+// const RAZORPAY_ID_KEY = "rzp_live_YOUR_LIVE_KEY_ID"; // Replace with your live key ID
+// const RAZORPAY_SECRET_KEY = "YOUR_LIVE_SECRET_KEY"; // Replace with your live secret key
+// const WEBHOOK_SECRET = "YOUR_WEBHOOK_SECRET"; // Replace with your webhook secret
+// const RAZORPAY_SANDBOX_MODE = false; // Set to false for production
+
 const LOCATION_KEY = "";
 
 module.exports = {
@@ -54,5 +64,6 @@ module.exports = {
   RAZORPAY_ID_KEY,
   RAZORPAY_SECRET_KEY,
   WEBHOOK_SECRET,
+  RAZORPAY_SANDBOX_MODE,
   LOCATION_KEY,
 };
